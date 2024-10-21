@@ -32,7 +32,7 @@ const App = () => {
         />
         <img
           src={SearchIcon}
-          alt="search" 
+          alt="search"
           onClick={() => searchMovies(searchTerm)}
         />
       </div>
