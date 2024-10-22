@@ -20,6 +20,12 @@ const App = () => {
     setMovies(data.Search);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      searchMovies(searchTerm); // Trigger search on Enter key press
+    }
+  };
+
   return (
     <div className="app">
       <h1>Movie Mania</h1>
@@ -28,6 +34,7 @@ const App = () => {
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={handleKeyDown} // Add keydown event for Enter key
           placeholder="Search for movies"
         />
         <img
